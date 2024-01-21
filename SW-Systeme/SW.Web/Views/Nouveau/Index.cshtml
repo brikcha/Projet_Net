@@ -1,0 +1,14 @@
+﻿@model List<string>
+
+@{
+    var test = 1 + 1;
+}
+<h1>Bienvenue @ViewData["Nom"] </h1>
+<h2>Vous trouverez ici des outils de gestion</h2>
+
+<p>La valeur de test est : @test</p>
+
+@foreach (var n in Model)
+{
+    <h3>@n</h3>
+}

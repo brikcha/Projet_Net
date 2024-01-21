@@ -1,0 +1,12 @@
+﻿@using SW.Models
+@model IEnumerable<Division>
+
+<h2>Enum Values</h2>
+
+<form method="get" asp-action="GetCitoyensByDivision">
+    <div class="form-group">
+        <label for="selectedDivision">Sélectionnez la division :</label>
+        <select name="selectedDivision" asp-items="Model.Select(d => new SelectListItem { Value = d.ToString(), Text = d.ToString() })"></select>
+    </div>
+    <button type="submit">Afficher les citoyens</button>
+</form>
